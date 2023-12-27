@@ -197,7 +197,7 @@ snippet template(basic) "Basic template" b
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.16}
 \usepackage{amsmath}
-\usepackage{mathrsfs} 
+\usepackage{mathrsfs}
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage{geometry}
@@ -381,6 +381,13 @@ snippet item "Itemize" bA
 \end{itemize}
 endsnippet
 
+# FIX: Added
+snippet ali "align" b
+\begin{align}
+	$0
+\end{align}
+endsnippet
+
 snippet desc "Description" b
 \begin{description}
 	\item[$1] $0
@@ -392,10 +399,9 @@ snippet pac "Package" b
 endsnippet
 
 
+# FIX: Changes
 snippet dm "Math" wA
-\[
-	${1:${VISUAL}}
-\]
+$${1:${VISUAL}}$
 endsnippet
 
 # add comma and period \]. -> .\] and \], -> ,\]
@@ -535,11 +541,11 @@ snippet I. "I\@." wA
 I\@.
 endsnippet
 
-# 'x  ' .   -> 'x ' 
+# 'x  ' .   -> 'x '
 # \S to avoid this snippet at the start of line
 context "not math()"
 snippet "(?<=\S)\s{2,}" "remove double spaces" iwrA
- 
+
 endsnippet
 
 # vim: ts=2 sw=2 noet:list:ft=snippets:
